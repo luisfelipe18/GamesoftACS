@@ -1,22 +1,22 @@
 # GamesoftACS
 This is the Anti Cheat System for Knight Online Gamesoft version
-Build the application on Debugx64
+Build the application on Debugx84
 
-The folder has two libraries inside:
+The folder has three libraries inside:
  - DetourAPI
  - Virtualizer
+ - Windows SDK June 2010 (This library was deprecated and cannot be installed on modern systems like Windows 10, Windows 8, Windows 11, I have found a Legacy version which installation is problematic but we only need the `Lib` and `Include` folders. I have added those folders to project to make it easy to build for everyone)
 
-You must add Detour3.0 and Virtualizer Include and Lib folders to VC++ Directories.
-Source says that it need the Include folder of Windows SDK June 2010, but this is not available for 
-Windows 8,10,11. Only Available for windows xp and vista. Link for Windows SDK June 2010: https://www.microsoft.com/en-us/download/detalles.aspx?id=8109
+The Project has relative paths to DetoursAPI, Virtualizer, WindowsSDK `include` and `lib` folders, so you dont need to change anything.
 
- - `PATH_TO_INCLUDE_FOLDER_WINDOWS_SDK_JUNE_2010; GamesoftACS/Gamesoft Security/DetourAPI/3.0/include; GamesoftACS/Gamesoft Security/Virtualizer/include`
- - `GamesoftACS/Gamesoft Security/DetourAPI/3.0/lib; GamesoftACS/Gamesoft Security/Virtualizer/lib`
+![image](https://user-images.githubusercontent.com/25039923/165550690-d9d0c82c-de8e-456e-a005-ef515f835db2.png)
 
-If you can build this, please write me.
+This is the output:
+![image](https://user-images.githubusercontent.com/25039923/165551106-a110d9b9-c8ba-4d28-bedc-f280aa482fac.png)
 
-I have this error on compile:
+But I dont known what to do with this output 🤣🤣
 
-![image](https://user-images.githubusercontent.com/25039923/161141679-82abb35f-7372-4d85-82a6-e87b8a7be877.png)
+**Note:**
+When building, don't forget to change the IP addres on lines 394 and 410 from `Pearl Engine.cpp` file by your Server IP address.
 
-Compiler doesn't recognize embebbed asembler code.
+**If you can build in Debugx64, please contact me or send a pull request.**
