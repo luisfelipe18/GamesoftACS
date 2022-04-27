@@ -75,10 +75,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;D:\ko-servers-to-test\gamesoft-koyardim\IMGUIHook\Gamesoft Security\DetourAPI\3.0\include;D:\ko-servers-to-test\gamesoft-koyardim\IMGUIHook\Gamesoft Security\Virtualizer\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\ko-servers-to-test\gamesoft-koyardim\IMGUIHook\Gamesoft Security\DetourAPI\3.0\lib;D:\ko-servers-to-test\gamesoft-koyardim\IMGUIHook\Gamesoft Security\Virtualizer\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\DetourAPI\include;$(ProjectDir)\MicrosoftSDK\Include;$(ProjectDir)\Virtualizer\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath);$(ProjectDir)\DetourAPI\lib;$(ProjectDir)\MicrosoftSDK\Lib;$(ProjectDir)\Virtualizer\lib</LibraryPath>
     <TargetExt>.ol</TargetExt>
     <TargetName>pl</TargetName>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\DetourAPI\include;$(SolutionDir)\MicrosoftSDK\Include;$(SolutionDir)\Virtualizer\include</ExternalIncludePath>
+    <OutDir>$(SolutionDir)output\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>

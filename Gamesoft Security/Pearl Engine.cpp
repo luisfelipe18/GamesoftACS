@@ -391,8 +391,7 @@ int WINAPI ConnectDetour(SOCKET s, const sockaddr* name, int namelen) {
 	struct sockaddr_in* addr_in = (struct sockaddr_in*)name;
 	char* _s = inet_ntoa(addr_in->sin_addr);
 	string hostAddress = string(_s);
-	//if(hostAddress != "37.156.246.70")  // ip
-	if (hostAddress != "172.18.33.174")
+	if(hostAddress != "37.156.246.70") // IP ADDRESS
 		return WSAECONNREFUSED;
 	return OrigConnect(s, name, namelen);
 }
@@ -408,8 +407,7 @@ int WSAAPI WSAConnectDetour(SOCKET s, const sockaddr* name, int namelen, LPWSABU
 	struct sockaddr_in* addr_in = (struct sockaddr_in*)name;
 	char* _s = inet_ntoa(addr_in->sin_addr);
 	string hostAddress = string(_s);
-	//if (hostAddress != "37.156.246.70") //ip 
-	if (hostAddress != "172.18.33.174")
+	if (hostAddress != "37.156.246.70") //IP ADDRESS
 		return WSAECONNREFUSED;
 	return OrigWSAConnect(s, name, namelen, lpCalleeData, lpCalleeData, lpSQOS, lpGQOS);
 }
@@ -676,7 +674,7 @@ void PearlEngine::InitPlayer() {
 	OrigOldRecv = (MyOldRecv)DetourFunction((PBYTE)recv, (PBYTE)OldRecvDetour);
 	OrigRecv = (MyRecv)DetourFunction((PBYTE)WSARecv, (PBYTE)RecvDetour);
 	OrigSend = (MySend)DetourFunction((PBYTE)send, (PBYTE)SendDetour);
-	OrigConnect = (MyConnect)DetourFunction((PBYTE)connect, (PBYTE)ConnectDetour);
+	OrigConnect = (MyConnect)DetourFunction((PBYTE)connect, (PBYTE)2ConnectDetour);
 	OrigClose = (MyClose)DetourFunction((PBYTE)closesocket, (PBYTE)CloseDetour);
 	OrigWSAConnect = (MyWSAConnect)DetourFunction((PBYTE)WSAConnect, (PBYTE)WSAConnectDetour);
 	OrigWSAStartup = (MyWSAStartup)DetourFunction((PBYTE)WSAStartup, (PBYTE)WSAStartupDetour);

@@ -1,27 +1,32 @@
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\vc140.pdb
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\vc140.idb
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\imgui.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\imgui_demo.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\imgui_draw.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\imgui_impl_dx9.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\imgui_impl_win32.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\imgui_widgets.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\md5.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\pearl engine.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\pearl.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\pearlgui.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\pl_processevent.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\splash.obj
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\debug\pl.lib
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\debug\pl.exp
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\debug\pl.ilk
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\debug\pl.ol
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\debug\pl.pdb
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\pearl guard.vcxproj.assemblyreference.cache
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\gamesoftengine.tlog\cl.command.1.tlog
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\gamesoftengine.tlog\cl.read.1.tlog
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\gamesoftengine.tlog\cl.write.1.tlog
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\gamesoftengine.tlog\gamesoftengine.write.1u.tlog
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\gamesoftengine.tlog\link.command.1.tlog
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\gamesoftengine.tlog\link.read.1.tlog
-d:\ko-servers-to-test\gamesoft-koyardim\imguihook\gamesoft security\debug\gamesoftengine.tlog\link.write.1.tlog
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\vc140.pdb
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\vc140.idb
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\imgui.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\imgui_demo.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\imgui_draw.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\imgui_impl_dx9.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\imgui_impl_win32.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\imgui_widgets.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\md5.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\splash.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\pl_processevent.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\pearl engine.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\pearl.obj
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\pearlgui.obj
+c:\users\l_199\desktop\gamesoftengineplugin\debug\pl.lib
+c:\users\l_199\desktop\gamesoftengineplugin\debug\pl.exp
+c:\users\l_199\desktop\gamesoftengineplugin\output\pl.lib
+c:\users\l_199\desktop\gamesoftengineplugin\output\pl.exp
+c:\users\l_199\desktop\gamesoftengineplugin\debug\pl.ilk
+c:\users\l_199\desktop\gamesoftengineplugin\debug\pl.ol
+c:\users\l_199\desktop\gamesoftengineplugin\debug\pl.pdb
+c:\users\l_199\desktop\gamesoftengineplugin\output\pl.ilk
+c:\users\l_199\desktop\gamesoftengineplugin\output\pl.ol
+c:\users\l_199\desktop\gamesoftengineplugin\output\pl.pdb
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\pearl guard.vcxproj.assemblyreference.cache
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\gamesoftengine.tlog\cl.command.1.tlog
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\gamesoftengine.tlog\cl.read.1.tlog
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\gamesoftengine.tlog\cl.write.1.tlog
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\gamesoftengine.tlog\gamesoftengine.write.1u.tlog
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\gamesoftengine.tlog\link.command.1.tlog
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\gamesoftengine.tlog\link.read.1.tlog
+c:\users\l_199\desktop\gamesoftengineplugin\gamesoft security\debug\gamesoftengine.tlog\link.write.1.tlog
