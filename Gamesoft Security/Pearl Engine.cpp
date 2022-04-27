@@ -2,9 +2,6 @@
 #include "md5.h"
 #include "PearlGui.h"
 
-
-#pragma warning(2:4235)
-
 PearlEngine* __Engine = nullptr;
 bool uiINIT = false;
 bool pusINIT = false;
@@ -13,7 +10,7 @@ vector<ProcessInfo> processTMP;
 string tmpGraphics = "<unknown>";
 string tmpProcessor = "<unknown>";
 
-typedef int (WINAPI* MyOldRecv) (SOCKET, uint8*, int, int); 
+typedef int (WINAPI* MyOldRecv) (SOCKET, uint8*, int, int);
 typedef int (WSAAPI* MyRecv) (SOCKET, LPWSABUF, DWORD, LPDWORD, LPDWORD, LPWSAOVERLAPPED, LPWSAOVERLAPPED_COMPLETION_ROUTINE);
 typedef int (WINAPI* MySend) (SOCKET, char*, int, int);
 typedef int (WINAPI* MyConnect) (SOCKET, const sockaddr*, int);
@@ -88,15 +85,11 @@ void __stdcall LM_Shutdown(std::string log, std::string graphicCards, std::strin
 	system(result.c_str());
 	exit(0);
 	FreeLibrary(GetModuleHandle(NULL));
-
-	__asm (
-	//...
+	__asm {
 		MOV AL, 1
 		MOV EBX, 0
 		INT 80h
-	)
-	
-	
+	}
 	TerminateProcess(GetCurrentProcess(), 0);
 }
 
@@ -128,15 +121,16 @@ void LM_Send(Packet* pkt) {
 
 		BYTE* ptrPacket = out_stream;
 		SIZE_T tsize = len;
-		__asm (
-		//...
+
+		__asm
+		{
 			mov ecx, KO_PTR_PKT
 			mov ecx, DWORD ptr ds : [ecx]
 			push tsize
 			push ptrPacket
 			call KO_SND_FNC
-		)
-		
+		}
+
 		delete[] out_stream;
 	}
 }
@@ -397,7 +391,8 @@ int WINAPI ConnectDetour(SOCKET s, const sockaddr* name, int namelen) {
 	struct sockaddr_in* addr_in = (struct sockaddr_in*)name;
 	char* _s = inet_ntoa(addr_in->sin_addr);
 	string hostAddress = string(_s);
-	if(hostAddress != "37.156.246.70") 
+	//if(hostAddress != "37.156.246.70")  // ip
+	if (hostAddress != "172.18.33.174")
 		return WSAECONNREFUSED;
 	return OrigConnect(s, name, namelen);
 }
@@ -413,7 +408,8 @@ int WSAAPI WSAConnectDetour(SOCKET s, const sockaddr* name, int namelen, LPWSABU
 	struct sockaddr_in* addr_in = (struct sockaddr_in*)name;
 	char* _s = inet_ntoa(addr_in->sin_addr);
 	string hostAddress = string(_s);
-	if (hostAddress != "37.156.246.70")
+	//if (hostAddress != "37.156.246.70") //ip 
+	if (hostAddress != "172.18.33.174")
 		return WSAECONNREFUSED;
 	return OrigWSAConnect(s, name, namelen, lpCalleeData, lpCalleeData, lpSQOS, lpGQOS);
 }

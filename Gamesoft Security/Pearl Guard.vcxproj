@@ -23,14 +23,14 @@
     <ProjectGuid>{710F3AD0-E063-490A-A7B4-B643FE7D56F7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>PearlGuard</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <ProjectName>GamesoftEngine</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
   </PropertyGroup>
@@ -45,7 +45,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -75,8 +75,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\cpp-projects\GameSoftHook\src\Gamesoft Security\Virtualizer\include;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\DetourAPI\3.0\include;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\packages\Include</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\DetourAPI\3.0\lib;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\Virtualizer\lib;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\packages\Lib</LibraryPath>
+    <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;D:\ko-servers-to-test\gamesoft-koyardim\IMGUIHook\Gamesoft Security\DetourAPI\3.0\include;D:\ko-servers-to-test\gamesoft-koyardim\IMGUIHook\Gamesoft Security\Virtualizer\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;D:\ko-servers-to-test\gamesoft-koyardim\IMGUIHook\Gamesoft Security\DetourAPI\3.0\lib;D:\ko-servers-to-test\gamesoft-koyardim\IMGUIHook\Gamesoft Security\Virtualizer\lib;$(LibraryPath)</LibraryPath>
     <TargetExt>.ol</TargetExt>
     <TargetName>pl</TargetName>
   </PropertyGroup>
@@ -84,8 +84,6 @@
     <LinkIncremental>true</LinkIncremental>
     <TargetName>pl</TargetName>
     <TargetExt>.ol</TargetExt>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\cpp-projects\GameSoftHook\src\Gamesoft Security\Virtualizer\include;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\DetourAPI\3.0\include;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\packages\Include;C:\SDK\June2010</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\DetourAPI\3.0\lib;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\Virtualizer\lib;D:\cpp-projects\GameSoftHook\src\Gamesoft Security\packages\Lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -111,14 +109,12 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <ExpandAttributedSource>false</ExpandAttributedSource>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalOptions> -S -masm=intel</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile></ModuleDefinitionFile>
-      <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -128,13 +124,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;PEARLGUARD_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalOptions></AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile></ModuleDefinitionFile>
+      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -165,7 +160,6 @@
       <EntryPointSymbol>
       </EntryPointSymbol>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -185,7 +179,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
-      <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

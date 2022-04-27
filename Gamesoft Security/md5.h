@@ -57,7 +57,6 @@ public:
 	void update(const unsigned char* buf, size_type length);
 	void update(const char* buf, size_type length);
 	MD5& finalize();
-	void sprintf_s(char* str, const char* text, unsigned char c) const;
 	std::string hexdigest() const;
 	friend std::ostream& operator<<(std::ostream&, MD5 md5);
 
