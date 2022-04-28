@@ -11,12 +11,9 @@ The Project has relative paths to DetoursAPI, Virtualizer, WindowsSDK `include` 
 
 ![image](https://user-images.githubusercontent.com/25039923/165550690-d9d0c82c-de8e-456e-a005-ef515f835db2.png)
 
-This is the output:
-![image](https://user-images.githubusercontent.com/25039923/165551106-a110d9b9-c8ba-4d28-bedc-f280aa482fac.png)
 
-But I dont known what to do with this output 🤣🤣
 
 **Note:**
 When building, don't forget to change the IP addres on lines 394 and 410 from `Pearl Engine.cpp` file by your Server IP address.
-
-**If you can build in Debugx64, please contact me or send a pull request.**
+You need to build in `Release x86` in order to get the `gamesoft.xasm` file with your own IP build in it.
+You put the output `gamesoft.xasm` into the Client Files.
